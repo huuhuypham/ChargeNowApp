@@ -1,4 +1,5 @@
-class SignupPage extends StatelessWidget {
+import 'package:flutter/material.dart';
+class StartPage extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
@@ -52,7 +53,9 @@ class SignupPage extends StatelessWidget {
                 ),
                 SizedBox(height: 12),
                 GestureDetector(
-                  onTap: () => Navigator.pop(context),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
                   child: Text.rich(
                     TextSpan(
                       text: "Have an account? ",
